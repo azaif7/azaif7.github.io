@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $black;
+  color: $white;
+  min-height: 100vh;
+  position: relative;
+  font-family: $primary-family;
+  overflow-x: hidden;
+}
+
+h3 {
+  opacity: 0.7;
+}
+
+.purple-clr {
+  color: $purple;
+}
+
+.secondary-family {
+  font-family: $secondary-family;
+}
+a,
+button {
+  transition: 0.5s all;
+}
+
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  display: none;
+  transition: all 0.5s;
+}
+
+.visible{
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.dim-head{
+  color: $purple;
+  opacity: 0.3;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  max-width: 18.75rem;
+}
+
+.mb-100{
+  margin-bottom: 10rem;
+}
+
+.btn{
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  &:focus, &:active:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn-primary{
+  background-color: $purple;
+  color: $white;
+  &:hover, &:focus, &:active{
+    background-color: $purple;
+    border-color: $purple;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.15);
+  }
+}
+
+//toggle switch
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc7e;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: $white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $purple;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $purple;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 0px none #ffffff;
+  border-radius: 0;
+
+  &:hover {
+    background: #000;
+  }
+
+  &:active {
+    background: #000;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: #0000008f;
+  border: 0px none transparent;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

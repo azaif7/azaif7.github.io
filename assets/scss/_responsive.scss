@@ -1,0 +1,14 @@
+@media #{$breakpoint-sm} {
+  .dim-head {
+    max-width: 100%;
+    text-align: center;
+  }
+  .contact-me {
+    ul{
+        text-align: center;
+    }
+  }
+  .slick-dots{
+    display: none !important;
+  }
+}
