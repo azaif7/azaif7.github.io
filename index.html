@@ -76,7 +76,8 @@
           </section>
 
           <!-- projects -->
-          <section class="projects mb-100" id="projects">
+          <section class="projects mb-60" id="projects">
+            <div style="height: 30px"></div>
             <h3 class="purple-clr">{ Projects }</h3>
             <div class="projects-carousel">
               <div>
@@ -102,7 +103,7 @@
                     </ul>
                     <button
                       class="btn btn-primary"
-                      onclick="window.open('https://www.riskshark.io')"
+                      onclick="window.open('https://riskshark-staging-frontend.troondemo.com/', '_blank')"
                     >
                       Visit Riskshark
                     </button>
@@ -139,7 +140,7 @@
                     </ul>
                     <button
                       class="btn btn-primary"
-                      onclick="window.open('https://phc-admin-qa.troonlab.io/', '_blank')"
+                      onclick="window.open('https://phc-admin-qa.troonlab.io', '_blank')"
                     >
                       Visit PHC
                     </button>
@@ -263,6 +264,7 @@
 
           <!-- Experience -->
           <section class="experience" id="about">
+            <div style="height: 30px"></div>
             <div class="toggle-about d-flex align-items-center">
               <!-- <span class="icon-embed2" id="toggle-btn"></span> -->
               <h3 class="purple-clr">{ About }</h3>
@@ -554,8 +556,46 @@
             <div class="row align-items-center">
               <div class="col-md-5">
                 <h2 class="dim-head mb-4">GET IN TOUCH</h2>
+                <!-- modify this form HTML and place wherever you want your form -->
               </div>
               <div class="col-md-7">
+                <form
+                  action="https://formspree.io/f/xzblpvpn"
+                  method="POST"
+                  class="pb-5"
+                  id="contactForm"
+                >
+                  <div class="row justify-content-end">
+                    <div class="col-lg-7">
+                      <div class="form-group mb-3">
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Enter email*"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <div class="form-group mb-3">
+                        <textarea
+                          name="message"
+                          placeholder="Enter Message*"
+                          class="form-control"
+                          required
+                        ></textarea>
+                      </div>
+                      <div>
+                        <button type="submit" class="btn btn-primary w-100">
+                          Send
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- your other form fields go here -->
+                </form>
                 <ul>
                   <li>
                     <a href="mailto:fayezaarashid@gmail.com" target="_blank"
@@ -575,9 +615,7 @@
                     ></a>
                   </li>
                   <li>
-                    <a
-                      href="https://stackoverflow.com/users/14014652/faiza07"
-                      target="_blank"
+                    <a href="6" target="_blank"
                       ><span class="icon-stackoverflow"></span
                     ></a>
                   </li>

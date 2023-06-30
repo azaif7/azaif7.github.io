@@ -33,6 +33,7 @@ footer {
 }
 
 #main-header {
+  transition: all 0.5s;
   .navbar {
     .navbar-brand {
       font-size: 32px;
@@ -52,6 +53,15 @@ footer {
         }
       }
     }
+  }
+  &.sticky{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: $black;
+    box-shadow: 0 5px 20px rgba(89, 24, 223, 0.1);
+    left: 0;
+    top: 0;
   }
 }
 
@@ -89,6 +99,7 @@ footer {
     }
   }
 }
+
 .slick-prev:before,
 .slick-next:before {
   font-size: 1.875rem;

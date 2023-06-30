@@ -3,7 +3,7 @@ $(document).ready(function () {
   const container = document.getElementById("binary-anime");
   const numBoxes = 7; // Number of boxes
   const boxWidth = 100 / numBoxes; // Width of each box in pixels
-  const spanHeight = 10; // Height of each span in pixels
+  const spanHeight = 15; // Height of each span in pixels
 
   const plainView = document.getElementById("plain-view");
   const editorView = document.getElementById("editor-view");
@@ -85,4 +85,31 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 2000,
   });
+
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  // Get the header
+  var header = document.getElementById("main-header");
+
+  // Get the offset position of the navbar
+  var sticky = header.offsetTop;
+
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  //to clear contact form
+  window.onbeforeunload = () => {
+    document.getElementById("contactForm").reset();
+    var allInputs = document.querySelectorAll("input");
+    allInputs.forEach((singleInput) => (singleInput.value = ""));
+  };
 });
